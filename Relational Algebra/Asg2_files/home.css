@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+.es-nameBanner{
+	padding: 0 10px 10px;
+	/*height:70px;
+	width:850px;*/
+	background-color:#DEDDEF;
+}
+
+.es-homePanel{
+	width:100%;
+}
+
+.es-homeLeftMenu{
+	float:left;
+	width:200px;
+	border-top:30px solid #DEDDEF;
+	padding-top:30px;
+	padding-bottom:50px;
+	border-right:3px solid #DEDDEF;
+}
+
+.es-userMenu{
+	padding-bottom:30px;
+	border-bottom:1px solid #DEDDEF;
+}
+
+.es-groupMenu{
+	padding-top: 10px;
+}
+
+.es-menuItem{
+	font-size:12px;
+	padding-left:50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor:pointer;
+	color:#000000;
+	background-repeat:no-repeat; 
+	background-position:30px;
+}
+
+.es-menuItem a{
+	color:black;
+}
+
+.es-menuItemSelected{
+	background-color:#DEDDEF;
+	cursor:default;
+	font-weight:bold;
+}
+
+.es-subPanel{
+	float:left;
+	/*border-left:1px solid #DEDDEF;*//*moved to left menu bar*/
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.es-homeSubmenuBanner{
+	/*width:450px;*/
+	height:30px;
+	padding-left:40px;
+	background-repeat:no-repeat;
+	background-position:10px 0px;
+	border-bottom:1px solid #DEDDEF;
+	color:#666666;
+}
+	
+.es-updatesContents{
+	margin:10px 0 10px 10px;
+	padding-bottom:30px;
+}
+
+.es-updatesMessageWell{
+	float:left;
+	width:500px;
+	/*border-right: 1px solid #DEDDEF;*/
+}
+
+.es-updatesRightRail{
+	float:left;
+	padding-left:10px;
+	padding-top:15px;
+}
+
+/** Msg Container Style */
+/**
+<div class="es-msgBlock">
+	<div class="es-mainMsg"></div>
+	<div class="es-msgResponses">
+		<div class="es-responseActions"></div>
+		<!-- Responses goes here -->
+		<div class="es-responseMsg"></div>
+		<div class="es-sendResponse"></div>
+	</div>                                    
+<div>
+*/
+
+.es-msgBlock{
+	clear:both;
+	padding:10px;
+	border-bottom: 1px solid #DEDDEF;
+	width:480px;
+}
+
+.es-mainMsg{
+	background-repeat:no-repeat;
+	/*padding: 0px 2px 10px 60px;*/
+}
+
+.es-msgImg{
+	float:left; 
+	width:50px;
+	padding:5px;
+}
+	
+.es-msgFooter{
+	margin: 5px;
+}
+.es-msgResponses{
+	padding-left:60px;	
+}
+
+.es-responseActions{
+	height:10px;
+	/*background-color:#DEDDEF;
+	margin:auto;
+	margin-bottom:2px;
+	padding-left:5px;
+	width:415px;*/
+}
+
+.es-responseActions, .es-responseMsg, .es-sendResponse{
+	background-color:#DEDDEF;
+	padding: 5px;
+	margin-bottom:2px;
+	float:left;
+	width:415px;
+	
+}
+
+.es-responseImg{
+	float:left;
+}
+
+.es-respMsgtxt{
+	padding-left:40px;
+	padding-bottom:5px;
+}
+
+/*-------- Right Rail ---------*/
+
+.es-rightRailTitle{
+	float:left;
+	padding:5px 30px;
+	margin: 5px 0px;
+	border-bottom: 1px solid #0100FB;
+	width:150px;
+	background-repeat:no-repeat;
+	background-position:10px 5px;
+}
+
+.es-alerts{
+	clear:both;
+	width:225px;
+	background-color:#FFC;
+	padding-bottom:10px;
+}
+
+.es-alertMsg{
+	clear:both;
+	padding: 5px 10px;
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+
+.es-alertTxt{
+
+}
+
+.es-alertAction{
+	clear:both;
+	margin-top: 5px;
+	height:12px;
+	border-bottom:1px solid #FFCC00;
+	padding:0px 10px 5px;
+}
+
+
+/** ------ Action Box ------ */
+/*
+<div class="es-actionBox">
+	<div class="es-actionContainer">
+		<div class="es-actionLinks">
+			<div class="es-action"></div>
+		</div>
+	</div>
+	<div class="es-actionButtons">
+	</div>
+	<div class="es-actionPreview">
+	</div>
+</div>
+*/
+
+.es-actionBox{
+	margin:15px;
+	padding:10px;
+	width:460px;
+	background-color:#DEDDEF;
+	-moz-border-radius: 5px 5px 5px 5px;
+}
+
+.es-actionContainer{
+	
+}
+
+.es-actionButtons{
+	clear:both;
+	float:right;
+}
+
+.es-actionPreview{
+	background:#F0F0F0;
+	padding:10px;
+	width:400px;
+	margin:15px;
+}
+
+.es-actionLinks{
+	padding:5px;
+}
+
+.es-action{
+	width: 120px;
+	padding: 3px 0px;
+	cursor:pointer;
+	color:#0100FB;
+	float:left;
+}
+
+.es-actionTextArea{
+	width:440px;
+	font:inherit;
+	font-size:inherit; 
+	border:1px solid #627AAD;
+	overflow:hidden;
+}
+
+/*---- dept list -----*/
+/*
+<div class="es-deptList">
+	<div class="es-titleType2"></div>
+	<div class="es-thumbContainer"></div>
+</div>
+*/
+.es-deptList{
+	margin-left:15px;
+	padding-bottom:15px;
+}
+
+.es-titleType2{
+	width:275px;
+	margin:5px 10px;
+	border-bottom:1px dotted #DEDDEF;
+}
+
+.es-thumbContainer{
+	width:600px;
+	
+}
+
+.es-thumbDiv{
+	margin:10px 15px;
+	float:left;
+}
+
+/* Course List */
+.es-courseContainer{
+	width: 600px;
+	padding-bottom: 50px;
+}

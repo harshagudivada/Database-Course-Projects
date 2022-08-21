@@ -1,0 +1,1 @@
+g++ -s bm.cpp sm.cpp sputil.cpp smutil.cpp dm.cpp sp.cpp base_rel_iter.c main.cpp

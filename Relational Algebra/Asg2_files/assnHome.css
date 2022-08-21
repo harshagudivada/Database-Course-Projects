@@ -1,0 +1,139 @@
+/*
+<div class="es-univBody">
+	<div class="es-univLeftBar">
+		<div class="es-univLMenu">
+			<div class="es-univLMenuItem"></div>
+		</div>                    	
+	</div>
+	<div class="es-univMainWell">
+	</div>
+</div>
+*/
+
+.es-courseBanner{
+	border-top:25px solid #DEDDEF;
+	border-bottom:2px solid #DEDDEF;
+	padding:5px 10px;
+	color:#009;
+}
+
+/*-- left rail --*/
+.es-univLeftBar{
+	width:150px;
+	/*border-right:2px solid #DEDDEF;*/
+	padding-bottom: 50px;
+	float:left;
+	cursor:default;
+}
+
+.es-univLMenu{
+	padding-top:50px;
+}
+
+.es-univLMenuItem{
+	background-position:5px 2px;
+	background-repeat:no-repeat;
+	color:#333333;
+	font-size:12px;
+	margin-top:5px;
+	padding:4px 2px 4px 25px;
+}
+
+.es-univLMenuItem a{
+	color:black;
+}
+
+/*-- main well --*/
+.es-univMainWell{
+	float:left;
+	border-left:1px solid #DEDDEF;
+}
+
+.es-univSubHeading{
+	width:200px;
+	padding:10px;
+	background-color:#DEDDEF;
+	margin-top:10px;
+}
+
+.es-events{
+	clear:both;
+	width:230px;
+	background-color:#EEFFFF;
+	padding-bottom:10px;
+}
+
+.es-eventMsg{
+	clear:both;
+	padding: 5px 10px;
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+
+.es-eventTxt{
+
+}
+
+.es-eventAction{
+	clear:both;
+	margin-top: 5px;
+	height:12px;
+	border-bottom:1px solid #FFCC00;
+	padding:0px 10px 5px;
+}
+.es-selRole{
+	text-decoration:underline;
+}
+
+/* right rail/main well */
+.es-univMainWell{
+	/*padding: 10px;*/
+}
+
+
+.es-pplContainer{
+	width: 600px;
+	padding: 10px 0px;
+}
+ 
+.es-thumbDiv{
+	margin:5px 10px;
+	float:left;
+}
+
+.es-wideBadgeContainer{
+	margin:5px 10px;
+}
+
+
+
+/* ------- invt form -------- */
+.es-invform{
+	width:500px;
+	margin-left:20px;
+}
+
+.es-invFieldName{
+	margin-top:20px;
+	color:#666666;
+	font-weight:bold;
+}
+
+.es-invField{
+	
+}
+
+.es-sentInvite{
+	width:480px;
+	border: 1px dotted #DEDDEF;
+	margin: 10px 5px;
+	padding:5px;
+	color:#960;
+}
+
+.es-asnBanner{
+	border-top:5px solid #DEDDEF;
+	border-bottom:2px solid #DEDDEF;
+	padding:5px 10px;
+	color:#900;
+}

@@ -1,0 +1,15 @@
+div#ufeedbackall{
+		position: absolute;
+		bottom:25px; 
+		left:100px; 
+		background-color:#FFE;
+		border:2px solid #666;
+	}
+	
+div > div#ufeedbackall{
+	position: fixed;
+}
+
+.es-horMenu a{
+	color:#FFF;
+}

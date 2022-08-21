@@ -1,0 +1,605 @@
+@charset "utf-8";
+/*******************************************************/
+/*******************************************************/
+/**     ______    __      _____ __                   ***/
+/**    / ____/___/ /_  __/ ___// /_  ____ _________  ***/
+/**   / __/ / __  / / / /\__ \/ __ \/ __ `/ ___/ _ \ ***/
+/**  / /___/ /_/ / /_/ /___/ / / / / /_/ / /  /  __/ ***/
+/** /_____/\__,_/\__,_//____/_/ /_/\__,_/_/   \___/  ***/
+/**                                                  ***/
+/*******************************************************/
+/*******************************************************/
+
+/** -------------------------------------------- */
+/** Include this in all the pages                */
+/** Version 2: April 11, 2010                    */
+/** http://muton.in                              */
+/** -------------------------------------------- */
+
+/** ------ CSS Fixes ----- */
+/* float clearing for IE6 */
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+
+/** ------ Application wide HTML tag settings --- */
+html, body{
+	height:100%;
+}
+
+body, input, select, table, textarea{
+	font-size: 11px; 
+    color: #333333; 
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+h1{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:36px;
+	font-weight: normal;
+}
+
+h2{
+	font-family:inherit;
+	font-weight:normal;
+	font-size:24px;
+}
+
+h3{
+	font-family:inherit;
+	font-weight:normal;
+	font-size:18px;
+	/*letter-spacing:0.1em; --> this was lame*/
+}
+
+h4{
+	font-family:inherit;
+	font-weight:bold;
+	font-size:16px;
+}	
+
+h5{
+	font-family:inherit;
+	font-weight:bold;
+	font-size:14px;
+}
+
+h6{
+	font-family:inherit;
+	font-weight:bold;
+	font-size:13px;
+}
+
+a {text-decoration:none;}
+a:link {color:#2786C2;}
+a:visited {color:#2786C2;}
+a:hover {color:#2786C2;}
+a:active {color:#2786C2;}
+
+a.external{
+	background:url(images/external.png) no-repeat scroll right center transparent;
+	padding-right:15px;
+}
+
+a.extLink{
+	background:url(images/icons/extLink.png) no-repeat scroll right center transparent;
+	padding-right:15px;
+}
+
+p{
+	padding-bottom:10px;
+}
+
+img.es-small{
+	height:30px;
+	width:30px;
+}
+
+a.es-entity{
+	font-weight:bold;
+}
+
+ul, ul.norm{
+	padding-left:20px;
+}
+
+ul, ul.norm li{
+	list-style:disc outside;
+}
+
+.es-selected{
+	background-color:#DEDDEF;
+	font-weight:bold;
+}
+/** ------ Structure Defining DIV classes ------- */
+.es-outerWrapper{
+	width:auto;
+	height: 100%;
+	margin: 0px auto -25px;
+}
+
+.es-topRibbon, .es-bottomRibbon{
+	clear:both;
+	height:25px;
+	background-color:#0100FB;
+}
+
+.es-topRibbon{
+	z-index:-100;
+}
+
+.es-bottomRibbon{
+	
+}
+
+.es-innerWrapper{
+	width:950px;
+	min-height: 100%;
+	/*height: expression('auto'); /* Hack for IE browsers */
+	height: auto !important;
+	height: 100%;
+	margin: -25px auto -25px;
+}
+
+.es-header{
+
+}
+
+.es-bodyWrapper{
+	clear:both;
+	height:100%;
+}
+
+.es-footer{
+	
+}
+
+.es-menuBar{
+	clear:both;
+	height:25px;
+	padding: 0px 10px;
+	color:#FFFFFF;
+	z-index:5;
+}
+
+.es-menuBar a{
+	color:#FFFFFF;
+}
+
+.es-searchBar{
+	clear:both;
+	height:30px;
+}
+
+.es-bottomInfo{
+	width:950px;
+	padding:5px 10px;
+	color:#FFFFFF;
+}
+
+/** ------- UI Effects ----------  */
+
+/** Rounded Corner classes (do not add style to this.. this is a marker class*/
+/** refer http://jquery.malsup.com/corner/ and see esCore.js */
+/** Usage: */
+/** for all round corner: <div class="someClass es-softCornerAll"> stuffs </div>; */
+/** passing radius: <div class="someClass es-softCornerAll" data-corner="5px"> stuffs </div> */
+.es-softCornerTL{}
+.es-softCornerTR{}
+.es-softCornerBL{}
+.es-softCornerBR{}
+.es-softCornerTop{}
+.es-softCornerLeft{}
+.es-softCornerRight{}
+.es-softCornerBottom{}
+.es-softCornerAll{}
+
+/** marker class --> opens immediate UL child tag in SLIDE-DOWN mode */
+.es-hoverMenu{}
+.es-menuable{
+	position:absolute; 
+	z-index:100; 
+	display:none;
+	float:left;
+	cursor:pointer;
+}
+
+/** Default Zebra table */
+.stripes{} /*marker class for zebra table*/
+
+table{
+    border-collapse:collapse;
+}
+th{
+    color:#000000;
+    background:#0CC;
+}
+
+td{
+    padding: 5px 10px;
+    border-bottom: 1px solid #DEDDEF;
+    vertical-align: middle;
+    text-align:center;
+}
+
+tr.alt td{
+    background: #EFEEFF;
+}
+
+tr.over td{
+    background: #DEDDEF;
+}
+
+/** EduShare Standard Button*/
+.es-button{
+    font-size:100%;
+	vertical-align:middle;
+	/*height:20px;*/
+}
+
+/** horizontal menu */
+.es-horMenu ul{
+	list-style:none;
+	float:left;
+}
+
+.es-horMenu li{
+	list-style:none;
+	float:left;
+	padding-left:20px;
+	padding-bottom:5px;
+}
+
+/** Readable Text */
+.es-text{
+	line-height:1.3em;
+}
+
+/** Time stamp */
+.es-time{
+	color:#666666;
+}
+
+/* FB like tab */
+
+.es-fbTabContainer{
+	padding: 0px 10px;
+	/*background-color:#DEDDEF;*/
+	border-bottom: 3px solid #DEDDEF;
+}
+
+.es-fbTab ul{
+	list-style:none;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.es-fbTab li{
+	margin-left:10px;
+	padding: 5px 15px;
+}
+
+.es-fbTabItem{
+	float:left;
+	background:#EFEEFF;
+	cursor:pointer;
+	color:#2786C2;
+}
+
+.es-fbTabItemSelected{
+	float:left;
+	cursor:default;
+	background:#DEDDEF;
+	
+}
+
+.es-fbTabHover{
+	background-color:#;
+	color:#2786C2;
+}
+
+/** warning boxes */
+.es-warn{
+	background-color:#FC0;
+	border:2px solid #000;
+	padding:5px;
+}
+
+/** BreadCrumb */
+.breadcrumb
+{
+    /*font: 11px Arial, Helvetica, sans-serif;*/
+    background-image:url('images/bc_bg.png'); 
+    background-repeat:repeat-x;
+    height:20px;
+    line-height:20px;
+    color:#9b9b9b;
+    width:100%;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+}
+.breadcrumb li 
+{
+    list-style-type:none;
+    float:left;
+    padding-left:10px;
+}
+.breadcrumb a
+{
+    height:20px;
+    display:block;
+    background-image:url('images/bc_separator.png'); 
+    background-repeat:no-repeat; 
+    background-position:right;
+    padding-right: 15px;
+    text-decoration: none;
+    /*color:#454545;*/
+}
+.home
+{
+    border:none;
+    margin: 8px 0px;
+}
+
+.breadcrumb a:hover
+{
+	color:#35acc5;
+}
+
+.leftArrow10x5{
+	float:left;
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-right:10px solid #DEDDEF;
+	border-left:0;
+}
+
+/*Help icon */
+.helpTip{
+	background-image: url(images/icons/qmark.png);
+	width:16px;
+	height:16px;
+}
+
+/* tooltip styling */
+.tooltip {
+	display:none;
+	font-size:12px;
+	padding:10px;
+	color:#fff;
+	border: 3px solid #999;
+	background-color:#666;
+	line-height:1.2em;
+}
+
+/* a .label element inside tooltip */
+.tooltip .label {
+	color:yellow;
+	width:35px;
+}
+
+.tooltip a {
+	color:#ad4;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.es-waiting{
+	position:absolute; 
+	z-index:100;
+	background-color:orange;
+}
+
+.es-percent-txtfld{
+	background:url("images/icons/percent.png") no-repeat scroll right center #FFFFFF;
+	border:1px solid #AAAAAA;
+}
+
+div.ui-dialog{
+    -moz-box-shadow:5px 5px 5px #191919;
+    -webkit-box-shadow:5px 5px 5px #191919;
+    box-shadow:5px 5px 5px #191919;
+}
+	
+
+.es-capsule{
+	width:80px;
+	padding:2px 10px; 
+	text-align:center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.es-cap-steelBlue{
+	background-color:#557FC0; 
+	color:#FFFFFF; 
+}
+
+.es-cap-brown{
+	background-color:brown; 
+	color:#FFFFFF;
+}
+
+.es-cap-darkBlue{
+	background-color:#000099; 
+	color:#FFFFFF;
+}
+
+.es-cap-gold{
+	background-color:#CC0; 
+	color:#000000;
+}
+.es-bg-updates30{
+	background-image:url(images/icons/updates30.png);
+}
+
+.es-bg-events16{
+	background-image:url(images/icons/events16.png);
+}
+
+.es-bg-updates16{
+	background-image:url(images/icons/updates16.png);
+}
+
+.es-bg-alert16{
+	background-image:url(images/icons/alert16.png);
+}
+
+.es-bg-assignment16{
+	background-image:url(images/icons/assignment16.png);
+}
+
+.es-bg-folder16{
+	background-image:url(images/icons/folder16.png);
+}
+
+.es-bg-calendar16{
+	background-image:url(images/icons/calendar16.png);
+}
+
+.es-bg-profile16{
+	background-image:url(images/icons/profile16.png);
+}
+
+.es-bg-polls16{
+	background-image:url(images/icons/polls16.png);
+}
+
+.es-bg-univ16{
+	background-image:url(images/icons/univ16.png);
+}
+
+.es-bg-dept16{
+	background-image:url(images/icons/dept16.png);
+}
+
+.es-bg-courses16{
+	background-image:url(images/icons/courses16.png);
+}
+
+.es-bg-settings16{
+	background-image:url(images/icons/settings16.png);
+}
+
+.es-bg-programs16{
+	background-image:url(images/icons/programs16.png);
+}
+
+.es-bg-batches16{
+	background-image:url(images/icons/batches16.png);
+}
+
+.es-bg-semesters16{
+	background-image:url(images/icons/semesters16.png);
+}
+
+.es-bg-people16{
+	background-image:url(images/icons/people16.png);
+}
+
+.es-bg-invite16{
+	background-image:url(images/icons/invite16.png);
+}
+
+.es-bg-addDept16{
+	background-image:url(images/icons/addDept16.png);
+}
+
+.es-bg-edit16{
+	background-image:url(images/icons/edit16.png);
+}
+
+.es-bg-addCourse16{
+	background-image:url(images/icons/addCourse16.png);
+}
+
+.es-bg-teacher16{
+	background-image:url(images/icons/teacher16.png);
+}
+
+.es-bg-allUser16{
+	background-image:url(images/icons/allUser16.png);
+}
+
+.es-bg-history16{
+	background-image:url(images/icons/history16.png);
+}
+
+.es-bg-fileSubmit16{
+	background-image:url(images/icons/submitFile16.png);
+}
+
+.es-bg-tick{
+	background-image:url(images/icons/tick.png);
+}
+
+.es-bg-grades{
+	background-image:url(images/icons/grades16.png);
+}
+
+.es-bg-group16{
+	background-image:url(images/icons/group16.png);
+}
+
+.es-bg-link16{
+	background-image:url(images/icons/link16.png);
+}
+
+.es-bg-link_break16{
+	background-image:url(images/icons/link_break16.png);
+}
+
+.es-bg-loginLink16{
+	background-image:url(images/icons/loginLink16.png);
+}
+
+.es-bg-FlagBlue16{
+	background-image:url(images/icons/flagBlue16.png);
+}
+
+.es-bg-turnLeft16{
+	background-image:url(images/icons/turnLeft16.png);
+}
+
+.es-bg-print16{
+	background-image:url(images/icons/print16.gif);
+}
+
+.es-bg-processing{
+	background-image:url(images/icons/processing.gif);
+}
+
+.es-basePageHighLight {
+	float:right;
+	padding:5px 10px;
+	background-color:yellow;
+	font-weight:bold;
+	margin-right:10px;
+}

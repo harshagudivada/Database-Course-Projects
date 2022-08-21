@@ -1,0 +1,9 @@
+#!/bin/sh
+echo yacc -vdt $1 "\n"
+yacc -vdt $1 # create y.tab.h, y.tab.c
+echo lex -d $2 "\n"
+lex -d $2 # create lex.yy.c
+echo g++ lex.yy.c y.tab.c -o $3 "\n"
+g++ lex.yy.c y.tab.c -o $3 # compile/link
+echo ./$3 "\n"
+./$3 

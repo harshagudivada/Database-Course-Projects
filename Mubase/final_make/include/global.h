@@ -1,0 +1,10 @@
+#define BLOCK_SIZE 4096
+#define NUM_BUFFS  8
+#define KEY_SIZE 4
+#define PTR_SIZE 4
+#define PAIR_SIZE (KEY_SIZE + PTR_SIZE)
+#define SIZE_INT 4
+#define SIZE_SHORT 2
+#define OBJNAME_SIZE 50
+#define OBJ_SIZE (OBJNAME_SIZE+SIZE_INT)
+
